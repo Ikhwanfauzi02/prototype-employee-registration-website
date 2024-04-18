@@ -1,0 +1,79 @@
+/* Button biru */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Button hijau */
+.button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button1:hover {
+    background-color: #45a049;
+}
+
+/* Button merah */
+.button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: Tomato;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button2:hover {
+    background-color: Tomato;
+}
+
+.container {
+    max-width: 700px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* container versi lebar */
+.container2 {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pos {
+    float: right;
+    margin-right: 20px;
+}
