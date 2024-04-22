@@ -42,7 +42,12 @@
             <!-- tambah deskripsi -->
             <label for="deskripsi">Deskripsi Pengalaman :</label>
             <textarea id="deskripsi" name="deskripsi" rows="6" required placeholder="Deskripsi Pengalaman Kerja"></textarea></br>
-            
+            <!-- tambah upload CV -->
+            <label for="cv">Upload CV (PDF):</label>
+            <input type="file" id="cv" name="cv" accept=".pdf" required><br>
+            <!-- tambah upload Pas Foto -->
+            <label for="foto">Upload Pas Foto :</label>
+            <input type="file" id="foto" name="foto" placeholder="Foto..."><br>
 
             <input class="mgr" type="submit" value="Submit">
         </form>

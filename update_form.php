@@ -14,15 +14,15 @@
         <h2>Update Data Pelamar</h2><br></br>
         <?php
             // Memeriksa apakah ID pelamar disediakan melalui parameter GET
-            if(isset($_GET['id'])) {
+            if(isset($_GET['id_pelamar'])) {
                 // Mendapatkan ID pelamar dari parameter GET
-            $id = $_GET['id'];
+            $id_pelamar = $_GET['id_pelamar'];
 
             // Memanggil koneksi ke database
             include('koneksi.db.php');
 
             // Menyiapkan dan menjalankan query untuk mendapatkan data pelamar berdasarkan ID
-            $sql = "SELECT * FROM data_pelamar WHERE id='$id'";
+            $sql = "SELECT * FROM data_pelamar WHERE id_pelamar='$id_pelamar'";
             $result = $koneksi->query($sql);
 
             // Memeriksa apakah data ditemukan
@@ -40,7 +40,7 @@
         ?>
             <!-- Menampilkan formulir dengan data pelamar yang telah ditemukan -->
             <form action="proses_update.php" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="hidden" name="id_pelamar" value="<?php echo $id_pelamar; ?>">
             <label for="nama">Nama :</label>
             <input type="text" id="nama" name="nama" value="<?php echo $nama; ?>"><br>
             <label for="email">Email :</label>

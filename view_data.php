@@ -35,16 +35,16 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row["id"] . "</td>";
+                echo "<td>" . $row["id_pelamar"] . "</td>";
                 echo "<td>" . $row["nama"] . "</td>";
                 echo "<td>" . $row["email"] . "</td>";
                 echo "<td>" . $row["telepon"] . "</td>";
                 echo "<td>" . $row["pendidikan"] . "</td>";
                 // tombol delete dengan link ke halaman proses_delete.php
                 echo "<td>
-                        <a href='detail_form.php?id=" . $row["id"] . "' class='button'>Detail</a>
-                        <a href='update_form.php?id=" . $row["id"] . "' class='button1'>Update</a>
-                        <a href='proses_delete.php?id=" . $row["id"] . "' class='button2'>Delete</a>
+                        <a href='detail_form.php?id=" . $row["id_pelamar"] . "' class='button'>Detail</a>
+                        <a href='update_form.php?id=" . $row["id_pelamar"] . "' class='button1'>Update</a>
+                        <a href='proses_delete.php?id=" . $row["id_pelamar"] . "' class='button2'>Delete</a>
                 </td>";
                 echo "</tr>";
             }

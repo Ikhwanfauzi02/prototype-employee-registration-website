@@ -1,16 +1,33 @@
 <?php
 // Konfigurasi 
 include('koneksi.db.php');
-// Mendapatkan ID dari URL
-$id = $_GET['id'];
 
-// Menyiapkan dan menjalankan query untuk menghapus data pelamar berdasarkan ID
-$sql = "DELETE FROM data_pelamar WHERE id = $id";
+// Memeriksa apakah parameter id_pelamar tersedia dalam URL
+if(isset($_GET['id_pelamar'])) {
+    // Mendapatkan ID dari URL
+    $id_pelamar = $_GET['id_pelamar'];
 
-if ($koneksi->query($sql) === TRUE) {
-    echo "Data berhasil dihapus.";
+    // Menyiapkan dan menjalankan query untuk menghapus data pelamar berdasarkan ID
+    $sql = "DELETE FROM data_pelamar WHERE id_pelamar = id_pelamar";
+    
+    // Prepare statement
+    $stmt = $koneksi->prepare($sql);
+
+    // Bind parameter
+    $stmt->bind_param("i", $id_pelamar);
+
+    // Execute statement
+    if ($stmt->execute()) {
+        echo "Data berhasil dihapus.";
+    } else {
+        echo "Error: " . $sql . "<br>" . $koneksi->error;
+    }
+
+    // Menutup statement
+    $stmt->close();
 } else {
-    echo "Error: " . $sql . "<br>" . $koneksi->error;
+    // Jika parameter id_pelamar tidak tersedia dalam URL
+    echo "ID pelamar tidak diberikan.";
 }
 
 // Menutup koneksi database
